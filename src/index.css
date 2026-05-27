@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-surface: rgba(255, 255, 255, 0.65);
+  --color-surface-dim: rgba(255, 255, 255, 0.45);
+  --color-surface-bright: rgba(255, 255, 255, 0.85);
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: rgba(255, 255, 255, 0.45);
+  --color-surface-container: rgba(255, 255, 255, 0.65);
+  --color-surface-container-high: rgba(255, 255, 255, 0.8);
+  --color-surface-container-highest: rgba(255, 255, 255, 0.95);
+  --color-on-surface: #111c15;
+  --color-on-surface-variant: #415347;
+  --color-inverse-surface: #111c15;
+  --color-inverse-on-surface: #ffffff;
+  --color-outline: rgba(32, 59, 41, 0.12);
+  --color-outline-variant: rgba(32, 59, 41, 0.06);
+  --color-surface-tint: #2a5235;
+  --color-primary: #2a5235;
+  --color-on-primary: #ffffff;
+  --color-primary-container: rgba(42, 82, 53, 0.08);
+  --color-on-primary-container: #142b1b;
+  --color-inverse-primary: #84b88a;
+  --color-secondary: #4c6f50;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: rgba(76, 111, 80, 0.08);
+  --color-on-secondary-container: #1e3321;
+  --color-tertiary: #36685c;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: rgba(54, 104, 92, 0.08);
+  --color-on-tertiary-container: #0f2621;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: rgba(211, 47, 47, 0.08);
+  --color-on-error-container: #410002;
+  --color-primary-fixed: #d2ecda;
+  --color-primary-fixed-dim: #b6d0bd;
+  --color-on-primary-fixed: #061f0f;
+  --color-on-primary-fixed-variant: #1a3b25;
+  --color-secondary-fixed: #e4f1e7;
+  --color-secondary-fixed-dim: #c8d5cb;
+  --color-on-secondary-fixed: #112316;
+  --color-on-secondary-fixed-variant: #2c3f30;
+  --color-tertiary-fixed: #e2f2ee;
+  --color-tertiary-fixed-dim: #c5d6d2;
+  --color-on-tertiary-fixed: #071e1b;
+  --color-on-tertiary-fixed-variant: #213531;
+  --color-background: #ffffff;
+  --color-on-background: #111c15;
+  --color-surface-variant: rgba(255, 255, 255, 0.55);
+
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Space Grotesk", Georgia, serif;
+}
+
+@utility organic-pulse {
+  animation: pulse-breath 8s ease-in-out infinite;
+}
+
+@utility blob-shape {
+  border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+}
+
+@utility stone-card {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(42, 82, 53, 0.12);
+  box-shadow: 0 10px 40px -10px rgba(42, 82, 53, 0.08);
+}
+
+@utility scroll-hide {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@utility parched-texture {
+  background-image: radial-gradient(circle at 10% 20%, rgba(42, 82, 53, 0.03) 0%, transparent 60%),
+                    radial-gradient(circle at 90% 80%, rgba(76, 111, 80, 0.03) 0%, transparent 60%);
+}
+
+@utility fab-pulse {
+  animation: pulse-ring 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+
+@utility topographical-line {
+  height: 0.5px;
+  background: linear-gradient(90deg, transparent, rgba(42, 82, 53, 0.1) 50%, transparent);
+}
+
+@keyframes pulse-breath {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.03); opacity: 0.95; }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.92); opacity: 0.8; }
+  50% { transform: scale(1.08); opacity: 0.35; }
+  100% { transform: scale(0.92); opacity: 0.8; }
+}
+
+/* Base custom resets */
+html, body {
+  background-color: #ffffff;
+  color: #111c15;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
