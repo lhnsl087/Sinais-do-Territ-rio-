@@ -1,6 +1,0 @@
-{
-  "name": "Territory Signals",
-  "description": "A highly-polished real-time environmental monitoring dashboard tracking biological rhythms, community reciprocity, and ecological signals.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
