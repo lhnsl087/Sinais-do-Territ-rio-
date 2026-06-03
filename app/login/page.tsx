@@ -9,7 +9,7 @@ export default function Login() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
   const [isSigningUp, setIsSigningUp] = useState(false);
-  const { signIn, signUp } = useAuth();
+const { signIn, signUp } = useAuth()!;
   const router = useRouter();
 
   const handleSubmit = async (e) => {
