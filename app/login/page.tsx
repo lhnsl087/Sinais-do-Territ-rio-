@@ -12,7 +12,7 @@ export default function Login() {
 const { signIn, signUp } = useAuth()!;
   const router = useRouter();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
     try {
